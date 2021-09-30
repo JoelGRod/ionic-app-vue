@@ -1,0 +1,8 @@
+{
+  "name": "IonicApp-Vue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue",
+  "id": "05c4c3ec"
+}

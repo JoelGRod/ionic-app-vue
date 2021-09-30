@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "IonicApp-Vue",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
