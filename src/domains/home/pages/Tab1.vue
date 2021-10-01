@@ -29,7 +29,7 @@
             <ion-label>{{ game.title }}</ion-label>
           </ion-item>
           <ion-item-options side="end">
-            <ion-item-option @click="unread(game.title)" >
+            <ion-item-option @click="saveFav(game)" >
               <ion-icon :icon="heartHalfOutline"></ion-icon>
             </ion-item-option>
           </ion-item-options>
@@ -56,8 +56,8 @@ import {
   IonListHeader,
   IonIcon
 } from "@ionic/vue";
-import { heartHalfOutline } from "ionicons/icons"
-import { ref } from "vue";
+import useGames from '../composables/useGames';
+import useIcons from '../../../infrastructure/shared/composables/useIcons';
 
 export default {
   name: "Tab1",
@@ -78,36 +78,9 @@ export default {
   },
 
   setup() {
-    const gamesList = ref([
-      {
-        id: 0,
-        title: "Dead Cells",
-      },
-      {
-        id: 1,
-        title: "Disco Elysium",
-      },
-      {
-        id: 2,
-        title: "Pathologic",
-      },
-      {
-        id: 3,
-        title: "Oxigen not Included",
-      },
-      {
-        id: 4,
-        title: "Encased",
-      },
-      {
-        id: 5,
-        title: "Hades",
-      },
-    ]);
 
-    const unread = ( item: any ) => {
-      console.log(item);
-    };
+    const { gamesList, saveFav } = useGames();
+    const { heartHalfOutline } = useIcons();
 
     return {
       // Icons
@@ -115,7 +88,7 @@ export default {
       // Public properties
       gamesList,
       // Public methods
-      unread,
+      saveFav,
     };
   },
 };
