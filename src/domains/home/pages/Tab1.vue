@@ -12,7 +12,7 @@
         </ion-toolbar>
       </ion-header>
 
-      <ion-list>
+      <ion-list ref="gamesListElement">
 
         <ion-list-header class="list-header">
           IonItem
@@ -79,14 +79,18 @@ export default {
 
   setup() {
 
-    const { gamesList, saveFav } = useGames();
+    const { gamesList, saveFav, gamesListElement } = useGames();
     const { heartHalfOutline } = useIcons();
 
+    console.log(gamesListElement);
+
+    
     return {
       // Icons
       heartHalfOutline,
       // Public properties
       gamesList,
+      gamesListElement,
       // Public methods
       saveFav,
     };

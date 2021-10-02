@@ -36,9 +36,14 @@ const useGames = () => {
 
       const favGames = ref<{ [key: number]: Game }>({});
 
+      const gamesListElement = ref();
+
       const saveFav = ( game: Game ) => {
         if( game.id in favGames.value ) delete favGames.value[game.id];
         else favGames.value[game.id] = game;
+
+        // We need to access the html elemnt with $el
+        gamesListElement.value.$el.closeSlidingItems();
 
         localStorage.setItem('favGames', JSON.stringify(favGames.value));
       };
@@ -46,6 +51,7 @@ const useGames = () => {
     return {
         // Public properties
         gamesList,
+        gamesListElement,
         // Public methods
         saveFav,
     }
