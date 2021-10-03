@@ -1,8 +1,9 @@
-import { heartHalfOutline } from "ionicons/icons"
+import { heartOutline, heart } from "ionicons/icons"
 
 const useIcons = () => {
     return {
-        heartHalfOutline,
+        heartOutline,
+        heart
     }
 }
 

@@ -30,7 +30,7 @@
           </ion-item>
           <ion-item-options side="end">
             <ion-item-option @click="saveFav(game)" >
-              <ion-icon :icon="heartHalfOutline"></ion-icon>
+              <ion-icon :icon="game.isFavourite ? heart : heartOutline"></ion-icon>
             </ion-item-option>
           </ion-item-options>
         </ion-item-sliding>
@@ -57,7 +57,7 @@ import {
   IonIcon
 } from "@ionic/vue";
 import useGames from '../composables/useGames';
-import useIcons from '../../../infrastructure/shared/composables/useIcons';
+import useIcons from '@/infrastructure/shared/composables/useIcons';
 
 export default {
   name: "Tab1",
@@ -80,14 +80,12 @@ export default {
   setup() {
 
     const { gamesList, saveFav, gamesListElement } = useGames();
-    const { heartHalfOutline } = useIcons();
-
-    console.log(gamesListElement);
-
+    const { heartOutline, heart } = useIcons();
     
     return {
       // Icons
-      heartHalfOutline,
+      heartOutline,
+      heart,
       // Public properties
       gamesList,
       gamesListElement,
