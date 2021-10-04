@@ -2,11 +2,17 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 
 import listsRoutes from '@/domains/lists/router';
+import homeRoutes from '@/domains/home/router';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/lists/lists1'
+    redirect: '/home'
+  },
+  {
+    path: '/home/',
+    component: () => import('@/domains/home/layouts/Home.vue'),
+    children: homeRoutes
   },
   {
     path: '/lists/',
