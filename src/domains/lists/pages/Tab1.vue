@@ -14,14 +14,14 @@
 
       <ion-list ref="gamesListElement">
 
-        <ion-list-header class="list-header">
+        <ion-list-header class="list-header" color="tertiary" lines="full">
           IonItem
         </ion-list-header>
         <ion-item v-for="game in gamesList" :key="game.id">
           <ion-label> {{ game.title }} </ion-label>
         </ion-item>
 
-        <ion-list-header class="list-header">
+        <ion-list-header class="list-header" color="success" lines="none">
           IonItemSliding
         </ion-list-header>
         <ion-item-sliding v-for="game in gamesList" :key="game.id">

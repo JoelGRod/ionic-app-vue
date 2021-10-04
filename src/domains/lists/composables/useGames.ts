@@ -1,6 +1,6 @@
 import { ref } from "vue";
-
-import { Game } from "../interfaces/home.interfaces";
+// Interfaces
+import { Game } from "../interfaces/lists.interfaces";
 
 const useGames = () => {
 
