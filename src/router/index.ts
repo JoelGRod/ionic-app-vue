@@ -11,7 +11,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/home/',
-    component: () => import('@/domains/home/layouts/Home.vue'),
+    component: () => import('@/domains/home/layouts/HomeLayout.vue'),
     children: homeRoutes
   },
   {

@@ -6,6 +6,8 @@ import {
   triangle,
   listOutline,
   exitOutline,
+  homeOutline,
+  planetOutline,
 } from "ionicons/icons";
 
 const useIcons = () => {
@@ -17,6 +19,8 @@ const useIcons = () => {
     triangle,
     listOutline,
     exitOutline,
+    homeOutline,
+    planetOutline,
   };
 };
 
