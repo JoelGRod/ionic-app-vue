@@ -13,7 +13,7 @@
       </ion-header>
 
       <ion-content>
-        <ion-title> Hello Home Layout </ion-title>
+        <ion-router-outlet></ion-router-outlet>
       </ion-content>
     </ion-page>
   </div>
@@ -33,6 +33,7 @@ import {
   IonTitle,
   IonContent,
   IonMenuButton,
+  IonRouterOutlet,
 } from "@ionic/vue";
 // Interfaces
 import { MenuItem } from "../interfaces/home.interfaces";
@@ -49,6 +50,7 @@ export default defineComponent({
     IonTitle,
     IonContent,
     IonMenuButton,
+    IonRouterOutlet,
     MenuComponent: defineAsyncComponent(
       () => import("../components/MenuComponent.vue") 
     )
@@ -65,9 +67,9 @@ export default defineComponent({
         link: "/home"
       },
       {
-        title: "Test",
+        title: "Lists",
         icon: planetOutline,
-        link: "/home/test"
+        link: "/lists"
       },
     ]
 

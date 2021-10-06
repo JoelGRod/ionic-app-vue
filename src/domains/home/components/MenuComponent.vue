@@ -1,5 +1,5 @@
 <template>
-  <ion-menu side="start" content-id="home-content" class="custom-menu">
+  <ion-menu menu-id="side-menu" side="start" content-id="home-content">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title> {{ title }} </ion-title>
@@ -9,8 +9,9 @@
     <ion-content class="menu-content">
       <ion-list>
         <ion-item 
-          v-for="{ title, icon } in menuItems" 
-          :key="title">
+          v-for="{ title, icon, link } in menuItems" 
+          :key="title" 
+          @click="navigateUrl( link )">
           <ion-icon :icon="icon" slot="start"></ion-icon>
           <ion-label>{{ title }}</ion-label>
         </ion-item>
@@ -21,6 +22,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { useRouter } from "vue-router";
 // Ionic components
 import {
   IonMenu,
@@ -32,6 +34,7 @@ import {
   IonItem,
   IonIcon,
   IonLabel,
+  menuController,
 } from "@ionic/vue";
 // Interfaces
 import { MenuItem } from "../interfaces/home.interfaces";
@@ -61,6 +64,16 @@ export default defineComponent({
     IonLabel,
   },
 
+  setup() {
+    const router = useRouter();
+
+    return {
+      navigateUrl: (url: string) => {
+        router.push( { path: url } );
+        menuController.close("side-menu");
+      },
+    };
+  },
 });
 </script>
 

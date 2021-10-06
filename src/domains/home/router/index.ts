@@ -6,8 +6,8 @@ const homeRoutes: Array<RouteRecordRaw> = [
   //   redirect: "/home/home",
   // },
   {
-    path: "home",
-    name: "home-1",
+    path: "",
+    name: "HomePage",
     component: () => import("@/domains/home/pages/HomePage.vue"),
   },
 ];

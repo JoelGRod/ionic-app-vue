@@ -1,13 +1,24 @@
 <template>
-  <h1>Hello World</h1>
+  <ion-page>
+    <ion-content>
+      <ion-title>
+        Hello World
+      </ion-title>
+    </ion-content>
+  </ion-page>
 </template>
 
 <script>
-export default {
+import { IonPage, IonContent, IonTitle } from "@ionic/vue";
 
-}
+export default {
+  name: "Home",
+  components: {
+    IonPage,
+    IonContent,
+    IonTitle,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

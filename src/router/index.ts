@@ -10,13 +10,13 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/home'
   },
   {
-    path: '/home/',
+    path: '/home',
     component: () => import('@/domains/home/layouts/HomeLayout.vue'),
     children: homeRoutes
   },
   {
-    path: '/lists/',
-    component: () => import('@/domains/lists/layouts/Tabs.vue'),
+    path: '/lists',
+    component: () => import('@/domains/lists/layouts/ListsLayout.vue'),
     children: listsRoutes
   }
 ]
