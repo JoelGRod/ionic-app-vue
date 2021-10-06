@@ -1,5 +1,5 @@
 <template>
-  <ion-menu menu-id="side-menu" side="start" content-id="home-content">
+  <ion-menu menu-id="side-menu" side="start" content-id="content">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title> {{ title }} </ion-title>
