@@ -68,8 +68,8 @@ export default defineComponent({
     const router = useRouter();
 
     return {
-      navigateUrl: (url: string) => {
-        router.push( { path: url } );
+      navigateUrl: (urlName: string) => {
+        router.push( { name: urlName } );
         menuController.close("side-menu");
       },
     };

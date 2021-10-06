@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <ion-page>
     <MenuComponent :menuItems="menuItems"></MenuComponent>
 
     <ion-page id="home-content">
@@ -16,7 +16,8 @@
         <ion-router-outlet></ion-router-outlet>
       </ion-content>
     </ion-page>
-  </div>
+    
+  </ion-page>
 </template>
 
 <script lang="ts">
@@ -64,12 +65,12 @@ export default defineComponent({
       {
         title: "Home",
         icon: homeOutline,
-        link: "/home"
+        link: "HomePage"
       },
       {
         title: "Lists",
         icon: planetOutline,
-        link: "/lists"
+        link: "Lists-1"
       },
     ]
 

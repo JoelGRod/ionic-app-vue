@@ -3,7 +3,7 @@ import { RouteRecordRaw } from "vue-router";
 const listsRoutes: Array<RouteRecordRaw> = [
   {
     path: "",
-    redirect: "/lists/lists1",
+    redirect: { name: "Lists-1" },
   },
   {
     path: "lists1",

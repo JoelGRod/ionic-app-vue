@@ -4,19 +4,19 @@
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom">
         <!-- <ion-tab-button tab="tab1" href="/lists/lists1"> -->
-        <ion-tab-button tab="tab1" @click="navigateUrl('/lists/lists1')">
+        <ion-tab-button tab="tab1" @click="navigateUrl('Lists-1')">
           <ion-icon :icon="listOutline" />
           <ion-label>Lists I</ion-label>
         </ion-tab-button>
 
         <!-- <ion-tab-button tab="tab2" href="/lists/lists2"> -->
-        <ion-tab-button tab="tab2" @click="navigateUrl('/lists/lists2')">
+        <ion-tab-button tab="tab2" @click="navigateUrl('Lists-2')">
           <ion-icon :icon="listOutline" />
           <ion-label>Lists II</ion-label>
         </ion-tab-button>
 
         <!-- <ion-tab-button tab="tab3" href="/home"> -->
-        <ion-tab-button tab="tab3" @click="navigateUrl('/home')">
+        <ion-tab-button tab="tab3" @click="navigateUrl('HomePage')">
           <ion-icon :icon="exitOutline" />
           <ion-label>Exit</ion-label>
         </ion-tab-button>
@@ -59,8 +59,8 @@ export default {
       listOutline,
       exitOutline,
       // Public methods
-      navigateUrl: (url: string) => {
-        router.push( { path: url } )
+      navigateUrl: (urlName: string) => {
+        router.push( { name: urlName } )
       }
     };
   },

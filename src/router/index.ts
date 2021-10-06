@@ -7,18 +7,24 @@ import homeRoutes from '@/domains/home/router';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: { name: "HomePage" }
   },
   {
     path: '/home',
+    name: 'Home',
     component: () => import('@/domains/home/layouts/HomeLayout.vue'),
     children: homeRoutes
   },
   {
     path: '/lists',
+    name: 'Lists',
     component: () => import('@/domains/lists/layouts/ListsLayout.vue'),
     children: listsRoutes
-  }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: { name: "HomePage" }
+  },
 ]
 
 const router = createRouter({
