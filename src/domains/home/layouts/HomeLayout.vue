@@ -1,21 +1,15 @@
 <template>
   <ion-page>
-    <MenuComponent :menuItems="menuItems"></MenuComponent>
+    <MenuComponent 
+      :menuItems="menuItems" 
+      contentId="home-content">
+    </MenuComponent>
 
-    <ion-page id="home-content">
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-          <ion-title> Home </ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <ion-content>
-        <ion-router-outlet></ion-router-outlet>
-      </ion-content>
-    </ion-page>
+    <master-layout 
+      title="Home" 
+      layoutId="home-content">
+      <ion-router-outlet></ion-router-outlet>
+    </master-layout>
     
   </ion-page>
 </template>
@@ -28,51 +22,23 @@ import {
 // Ionic components
 import {
   IonPage,
-  IonHeader,
-  IonToolbar,
-  IonButtons,
-  IonTitle,
-  IonContent,
-  IonMenuButton,
   IonRouterOutlet,
 } from "@ionic/vue";
-// Interfaces
-import { MenuItem } from "../interfaces/home.interfaces";
-// Icons
-import useIcons from "@/infrastructure/shared/composables/useIcons";
+// Composables
+import useMenu from "../composables/useMenu";
 
 export default defineComponent({
   name: "HomeLayout",
   components: {
     IonPage,
-    IonHeader,
-    IonToolbar,
-    IonButtons,
-    IonTitle,
-    IonContent,
-    IonMenuButton,
     IonRouterOutlet,
     MenuComponent: defineAsyncComponent(
-      () => import("../components/MenuComponent.vue") 
+      () => import("../../../infrastructure/shared/components/MenuComponent.vue") 
     )
   },
 
   setup() {
-
-    const { homeOutline, planetOutline } = useIcons();
-
-    const menuItems: MenuItem[] = [
-      {
-        title: "Home",
-        icon: homeOutline,
-        link: "HomePage"
-      },
-      {
-        title: "Lists",
-        icon: planetOutline,
-        link: "Lists-1"
-      },
-    ]
+    const { menuItems } = useMenu();
 
     return {
       menuItems,
@@ -80,5 +46,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style></style>

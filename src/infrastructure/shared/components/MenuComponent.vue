@@ -1,5 +1,5 @@
 <template>
-  <ion-menu menu-id="side-menu" side="start" content-id="home-content">
+  <ion-menu menu-id="side-menu" side="start" :content-id="contentId">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title> {{ title }} </ion-title>
@@ -37,7 +37,7 @@ import {
   menuController,
 } from "@ionic/vue";
 // Interfaces
-import { MenuItem } from "../interfaces/home.interfaces";
+import { MenuItem } from "@/infrastructure/shared/interfaces/home.interfaces";
 
 export default defineComponent({
   name: "SideMenu",
@@ -51,6 +51,11 @@ export default defineComponent({
       type: Object as () => MenuItem[],
       required: true,
     },
+    contentId: {
+      type: String,
+      required: true,
+      default: "page-content"
+    }
   },
   components: {
     IonMenu,
