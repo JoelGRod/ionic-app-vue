@@ -4,3 +4,10 @@ export interface MenuItem {
     icon: string;
     link: string;
 }
+
+export interface TabItem {
+    tabName: string;
+    link: string;
+    icon: string;
+    tabLabel: string;
+}
