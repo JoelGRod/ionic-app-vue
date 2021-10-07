@@ -33,7 +33,7 @@ export default defineComponent({
     IonPage,
     IonRouterOutlet,
     MenuComponent: defineAsyncComponent(
-      () => import("../../../infrastructure/shared/components/MenuComponent.vue") 
+      () => import("@/infrastructure/shared/components/MenuComponent.vue") 
     )
   },
 
