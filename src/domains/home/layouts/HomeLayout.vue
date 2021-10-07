@@ -1,5 +1,6 @@
 <template>
   <ion-page>
+    
     <MenuComponent 
       :menuItems="menuItems" 
       contentId="home-content">
@@ -16,14 +17,14 @@
 
 <script lang="ts">
 import { 
-  defineComponent, 
-  defineAsyncComponent 
+  defineComponent, defineAsyncComponent 
 } from "vue";
+
 // Ionic components
 import {
-  IonPage,
-  IonRouterOutlet,
+  IonPage, IonRouterOutlet,
 } from "@ionic/vue";
+
 // Composables
 import useMenu from "../composables/useMenu";
 
