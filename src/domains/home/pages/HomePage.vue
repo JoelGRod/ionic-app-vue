@@ -83,6 +83,66 @@
         </ion-row>
       </ion-grid>
 
+      <h3>Responsive width - fixed</h3>
+
+      <ion-grid :fixed="true">
+        <ion-row
+          class="ion-justify-content-center">
+          <ion-col class="red flex" size="12" size-sm="6" size-md="3" size-lg>
+            <p>Test A</p>
+          </ion-col>
+          <ion-col class="blue flex" size="12" size-sm="6" size-md="2" size-lg>
+            <p>Test B</p>
+          </ion-col>
+          <ion-col class="purple flex" size="12" size-sm="6" size-md="2" size-lg>
+            <p>Test C</p>
+          </ion-col>
+          <ion-col class="green flex" size="12" size-sm="6" size-md="3" size-lg>
+            <p>Test D</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <h3>Responsive width + offset - fixed</h3>
+
+      <ion-grid :fixed="true">
+        <ion-row
+          class="ion-justify-content-center">
+          <ion-col class="red flex" size="12" size-sm="6" size-md="3" size-lg>
+            <p>Test A</p>
+          </ion-col>
+          <ion-col class="blue flex" size="12" size-sm="6" size-md="2" size-lg offset-md="0.2">
+            <p>Test B</p>
+          </ion-col>
+          <ion-col class="purple flex" size="12" size-sm="6" size-md="2" size-lg offset-md="0.2">
+            <p>Test C</p>
+          </ion-col>
+          <ion-col class="green flex" size="12" size-sm="6" size-md="3" size-lg offset-md="0.2">
+            <p>Test D</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <h3>Responsive width + Push and Pull - fixed</h3>
+
+      <ion-grid :fixed="true">
+        <ion-row
+          class="ion-justify-content-center">
+          <ion-col class="red flex" size="12" size-sm="6" size-md="3" size-lg push-md="2.2">
+            <p>Test A</p>
+          </ion-col>
+          <ion-col class="blue flex" size="12" size-sm="6" size-md="2" size-lg offset-md="0.2" pull-md="3.2">
+            <p>Test B</p>
+          </ion-col>
+          <ion-col class="purple flex" size="12" size-sm="6" size-md="2" size-lg offset-md="0.2">
+            <p>Test C</p>
+          </ion-col>
+          <ion-col class="green flex" size="12" size-sm="6" size-md="3" size-lg offset-md="0.2">
+            <p>Test D</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
     </ion-content>
   </ion-page>
 </template>
