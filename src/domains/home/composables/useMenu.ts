@@ -5,7 +5,7 @@ import useIcons from "@/infrastructure/shared/composables/useIcons";
 
 const useMenu = () => {
 
-    const { homeOutline, planetOutline } = useIcons();
+    const { homeOutline, planetOutline, square } = useIcons();
 
     const menuItems: MenuItem[] = [
         {
@@ -17,6 +17,11 @@ const useMenu = () => {
           title: "Lists",
           icon: planetOutline,
           link: "Lists-1"
+        },
+        {
+          title: "Utility",
+          icon: square,
+          link: "GridPage"
         },
     ];
 

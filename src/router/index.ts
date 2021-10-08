@@ -3,6 +3,7 @@ import { RouteRecordRaw } from 'vue-router';
 
 import listsRoutes from '@/domains/lists/router';
 import homeRoutes from '@/domains/home/router';
+import utilityRoutes from '@/domains/utility/router';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,6 +21,12 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Lists',
     component: () => import('@/domains/lists/layouts/ListsLayout.vue'),
     children: listsRoutes
+  },
+  {
+    path: '/utils',
+    name: 'Utils',
+    component: () => import('@/domains/utility/layouts/UtilityLayout.vue'),
+    children: utilityRoutes
   },
   {
     path: '/:pathMatch(.*)*',
