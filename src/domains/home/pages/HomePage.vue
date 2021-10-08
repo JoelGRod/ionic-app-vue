@@ -6,7 +6,7 @@
         <h2 class="ion-hide-sm-down">Hidden Text below sm breakpoint</h2>
         <h3>Same Width - no fixed</h3>
         <ion-row class="ion-justify-content-center">
-          <ion-col class="red ion-text-justify ion-text-capitalize">
+          <ion-col class="red ion-text-justify ion-text-capitalize ion-padding">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
           </ion-col>
           <ion-col class="blue flex">
